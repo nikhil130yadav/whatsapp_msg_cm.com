@@ -13,7 +13,7 @@ class MessagingClient():
         self._name_space =  name_space
         
         
-    def sendMessage(self,template_name,message=[],to_numbers =[]):
+    def sendTemplateMessage(self,template_name,message=[],to_numbers =[]):
         '''
         Method to send template msg wihtout any rich media on whatsapp routing through cm.com.
         Parameters:
@@ -86,7 +86,7 @@ class MessagingClient():
         return requests.post(url=self.global_endpoint,data=auth,headers=headers)
         
 
-    def send_chatbot_response(self,message="Hello World",to_numbers =[]):
+    def sendTextmessage(self,message="Hello World",to_numbers =[]):
         '''
         Method to send normal Text msg on whatsapp routing through cm.com account
         Parameters:
